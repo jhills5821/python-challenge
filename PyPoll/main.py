@@ -40,3 +40,14 @@ for each in canidatelist:
     print(str(canidatelist[z]),": ","{0:.3%}%".format(votepercent[z])," (",str(canidatevotes[z]),")")
 print("-------------------")
 print("Winner: ",winner)
+
+with open("Output.txt", "w") as text_file:
+    print("Election Results:", file=text_file)
+    print("-------------------", file=text_file)
+    print("Total Votes: ", x, file=text_file)
+
+    for each in canidatelist:
+        z=canidatelist.index(each)
+        print(str(canidatelist[z]),": ","{0:.3%}%".format(votepercent[z])," (",str(canidatevotes[z]),")", file=text_file)
+    print("-------------------", file=text_file)
+    print("Winner: ",winner, file=text_file)

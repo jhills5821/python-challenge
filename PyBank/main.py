@@ -39,3 +39,10 @@ with open(bank_csv_path, newline="") as csvfile:
     print("Average Change: $", avgchange)
     print("Greatest Increase in Profits: ",months[profitloc+1]," (",changes[profitloc],")")
     print("Greatest Decrease in Profits: ",months[lossloc+1]," (",changes[lossloc],")")
+
+with open("Output.txt", "w") as text_file:
+    print("Total Months: ", total_months, file=text_file)
+    print("Total: $", str(total), file=text_file)
+    print("Average Change: $", avgchange, file=text_file)
+    print("Greatest Increase in Profits: ",months[profitloc+1]," (",changes[profitloc],")", file=text_file)
+    print("Greatest Decrease in Profits: ",months[lossloc+1]," (",changes[lossloc],")", file=text_file)
