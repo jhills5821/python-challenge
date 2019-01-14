@@ -28,7 +28,7 @@ for vote in canidatevotes:
         winnertest=vote
     a = canidatevotes.index(winnertest)
     winner = canidatelist[a]
-    percent = (vote/x)
+    percent = (vote/x)*100
     votepercent.append(percent)
 
 print("Election Results:")
@@ -37,7 +37,7 @@ print("Total Votes: ", x)
 
 for each in canidatelist:
     z=canidatelist.index(each)
-    print(str(canidatelist[z]),": ","{0:.3%}%".format(votepercent[z])," (",str(canidatevotes[z]),")")
+    print(str(canidatelist[z]),": ",round(votepercent[z],3)," (",str(canidatevotes[z]),")")
 print("-------------------")
 print("Winner: ",winner)
 
